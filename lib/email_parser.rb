@@ -15,7 +15,7 @@ class EmailParser
     @@all << self
   end
 
-  def parse
+  def self.parse
     self.emails.split(" ").collect{|e| e}.join(" ")
   end
 
