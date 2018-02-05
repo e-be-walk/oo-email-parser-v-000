@@ -11,14 +11,8 @@ class EmailParser
 
   def parse
     uniq_emails = []
-    new_emails = 
-    self.emails.split(" ").collect{|e| e}.join(" ")
+    new_emails = @emails.gsub(","," ")
+    uniq_emails = new_emails.split(" ").uniq
+    uniq_emails
   end
-
-  def self.normalize_emails
-    self.all.each do |email|
-      email.emails = email.parse
-    end
-  end
-
 end
