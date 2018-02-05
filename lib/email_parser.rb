@@ -17,11 +17,12 @@ class EmailParser
 
   def normalize_email
     self.emails.split(" ").collect{|e| e}.join(", ")
-  end 
+  end
 
   def self.normalize_emails
     self.all.each do |email|
       email.emails = email.normalize_email
     end
+  end
 
 end
