@@ -16,7 +16,7 @@ class EmailParser
   end
 
   def parse
-    self.emails.split(" ").collect{|e| e}.join(", ")
+    self.emails.split(" ").collect{|e| e}.join(" ")
   end
 
   def self.normalize_emails
