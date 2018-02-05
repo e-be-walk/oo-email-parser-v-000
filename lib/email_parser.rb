@@ -4,18 +4,14 @@
 # or whitespace (' ').
 class EmailParser
   attr_accessor :emails
-  @@all = []
-
-  def self.all
-    @@all
-  end
 
   def initialize(emails)
     @emails = emails
-    @@all << self
   end
 
-  def self.parse
+  def parse
+    uniq_emails = []
+    new_emails = 
     self.emails.split(" ").collect{|e| e}.join(" ")
   end
 
